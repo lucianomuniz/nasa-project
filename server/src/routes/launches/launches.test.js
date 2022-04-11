@@ -29,7 +29,7 @@ describe("Launches API", () => {
       mission: "USS Enterprise",
       rocket: "NCC 1701-D",
       target: "Kepler-62 f",
-      launchDate: "Janurary 4, 2028",
+      launchDate: "Janurary 2, 2028",
     };
 
     const launchDataWithoutDate = {
