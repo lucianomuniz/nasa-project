@@ -6,22 +6,15 @@
   "scripts": {
     "install-server": "npm install --prefix server",
     "install-client": "npm install --prefix client",
-    "install": "npm run install-server&& npm run install-client",
+    "install": "npm run install-server && npm run install-client",
     "server": "npm run watch --prefix server",
     "client": "npm run start --prefix client",
-    "watch": "concurrently \"npm run server\" \"npm run client\"",
-    "deploy": "concurrently \"npm run build --prefix client\" \"npm start --prefix server\"",
-    "deploy-cluster": "concurrently \"npm run build --prefix client\" \"npm run cluster --prefix server\"",
-    "test": "npm test --prefix server&& npm test --prefix client"
+    "watch": "npm run server & npm run client",
+    "deploy": "npm run build --prefix client && npm start --prefix server",
+    "deploy-cluster": "npm run build --prefix client && npm run cluster --prefix server",
+    "test": "npm test --prefix server && npm test --prefix client"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC",
-  "devDependencies": {
-    "concurrently": "^7.0.0"
-  },
-  "dependencies": {
-    "axios": "^0.26.1",
-    "mongoose": "^6.2.8"
-  }
+  "license": "ISC"
 }
